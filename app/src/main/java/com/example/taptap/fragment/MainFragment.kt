@@ -1,4 +1,4 @@
-package com.example.taptap
+package com.example.taptap.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
