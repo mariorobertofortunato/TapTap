@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -15,22 +16,23 @@ class MainFragment : Fragment() {
     private lateinit var binding: FragmentMainBinding
     private val viewModel by viewModels<ViewModel>()
 
+    private lateinit var highScore: HighScore
+    private var currentScore = 0
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         // Inflate the layout for this fragment
         binding = FragmentMainBinding.inflate(layoutInflater)
 
-        val currentScore = HighScore (0, "Ciccio", 1000)
-        val currentScore2 = HighScore (1, "franco", 500)
-        val currentScore3 = HighScore (2, "minchio", 1000)
-        val currentScore4 = HighScore (3, "stronzo", 1000)
 
-        /** questa è una prova*/
+
+
         binding.tapButton.setOnClickListener {
-            viewModel.insertHighScore(currentScore)
-            viewModel.insertHighScore(currentScore2)
-            viewModel.insertHighScore(currentScore3)
-            viewModel.insertHighScore(currentScore4)
+            /**  P S E U D O C O D E */
+            startTimer()
+                while (timer > 0) {
+                    currentScore++
+                }
         }
 
         binding.highScoreButton.setOnClickListener {
