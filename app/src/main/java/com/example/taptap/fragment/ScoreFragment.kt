@@ -10,13 +10,15 @@ import com.example.taptap.databinding.FragmentScoreBinding
 
 class ScoreFragment : Fragment() {
 
-    private lateinit var binding : FragmentScoreBinding
+    private lateinit var binding: FragmentScoreBinding
     private val viewModel by viewModels<ViewModel>()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         // Inflate the layout for this fragment
         binding = FragmentScoreBinding.inflate(layoutInflater)
+
+        viewModel.getHighScores()
 
         val adapter = Adapter()
         binding.recycler.adapter = adapter
