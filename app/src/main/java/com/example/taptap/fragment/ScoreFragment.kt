@@ -22,6 +22,7 @@ class ScoreFragment : Fragment() {
 
         val adapter = Adapter()
         binding.recycler.adapter = adapter
+
         viewModel.highScoreList.observe(viewLifecycleOwner) { highScoresList ->
             adapter.submitList(highScoresList)
         }
