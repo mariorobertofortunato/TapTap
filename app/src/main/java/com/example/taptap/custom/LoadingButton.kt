@@ -48,7 +48,7 @@ class LoadingButton @JvmOverloads constructor(
         textSize = 60.0f
         typeface = Typeface.create("", Typeface.BOLD)
     }
-    //Progrerss bar & Anim Circle UpdateListeners
+    //Progress bar & Anim Circle UpdateListeners
     private val barUpdateListener = ValueAnimator.AnimatorUpdateListener {
         barProgress = (it.animatedValue as Float).toDouble()
         invalidate()
