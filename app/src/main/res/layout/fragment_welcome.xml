@@ -18,36 +18,78 @@
             android:layout_height="match_parent"
             android:background="@drawable/untitled">
 
-            <ImageView
-                android:id="@+id/t"
-                android:layout_width="50dp"
-                android:layout_height="125dp"
-                android:src="@drawable/ic_t"
-                app:layout_constraintBottom_toTopOf="@+id/custom_button"
-                app:layout_constraintEnd_toStartOf="@id/p"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:id="@+id/a"
-                android:layout_width="97dp"
-                android:layout_height="214dp"
-                android:src="@drawable/letter_a_4"
-                app:layout_constraintBottom_toTopOf="@+id/custom_button"
-                app:layout_constraintEnd_toStartOf="@id/p"
-                app:layout_constraintStart_toEndOf="@id/t"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/p"
-                android:layout_width="50dp"
-                android:layout_height="125dp"
-                android:src="@drawable/ic_p"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/letters_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 app:layout_constraintBottom_toTopOf="@+id/custom_button"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/t"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.7">
 
+                <ImageView
+                    android:id="@+id/t1"
+                    android:layout_width="50dp"
+                    android:layout_height="125dp"
+                    android:src="@drawable/ic_t"
+                    app:layout_constraintBottom_toTopOf="@+id/t2"
+                    app:layout_constraintEnd_toStartOf="@id/p1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/a1"
+                    android:layout_width="100dp"
+                    android:layout_height="165dp"
+                    android:src="@drawable/letter_a_4"
+                    app:layout_constraintBottom_toTopOf="@+id/a2"
+                    app:layout_constraintEnd_toStartOf="@id/p1"
+                    app:layout_constraintStart_toEndOf="@id/t1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/p1"
+                    android:layout_width="50dp"
+                    android:layout_height="125dp"
+                    android:src="@drawable/ic_p"
+                    app:layout_constraintBottom_toTopOf="@+id/p2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/t1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/t2"
+                    android:layout_width="50dp"
+                    android:layout_height="125dp"
+                    android:src="@drawable/ic_t"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/p2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/t1" />
+
+                <ImageView
+                    android:id="@+id/a2"
+                    android:layout_width="100dp"
+                    android:layout_height="180dp"
+                    android:src="@drawable/letter_a_4"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/p2"
+                    app:layout_constraintStart_toEndOf="@id/t2"
+                    app:layout_constraintTop_toBottomOf="@+id/a1" />
+
+                <ImageView
+                    android:id="@+id/p2"
+                    android:layout_width="50dp"
+                    android:layout_height="125dp"
+                    android:src="@drawable/ic_p"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/t2"
+                    app:layout_constraintTop_toBottomOf="@+id/p1" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <com.example.taptap.custom.LoadingButton
                 android:id="@+id/custom_button"
