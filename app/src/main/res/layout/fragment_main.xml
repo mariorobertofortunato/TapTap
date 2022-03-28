@@ -60,7 +60,8 @@
                 app:layout_constraintBottom_toTopOf="@+id/timer"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/score_label" />
+                app:layout_constraintTop_toBottomOf="@+id/score_label"
+                android:backgroundTint="@color/red_RYB"/>
 
             <TextView
                 android:id="@+id/timer"
