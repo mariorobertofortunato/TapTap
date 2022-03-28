@@ -36,13 +36,13 @@ class WelcomeFragment : Fragment() {
         letterP2 = binding.p2
 
         //Animation (custom btn + letters)
-        buttonAnimation()
-        tScaler(letterT1,0)
-        aScaler(letterA1,100)
-        pScaler(letterP1,200)
-        tScaler(letterT2,150)
-        aScaler(letterA2,250)
-        pScaler(letterP2,300)
+        buttonAndLettersAnimation()
+        scaler(letterT1,0,1.5f)
+        scaler(letterA1,100,1.25f)
+        scaler(letterP1,200,1.5f)
+        scaler(letterT2,150, 1.5f)
+        scaler(letterA2,250, 1.25f)
+        scaler(letterP2,300, 1.5f)
 
         // Navigate to MainFrag
         binding.customButton.setOnClickListener {
@@ -56,15 +56,18 @@ class WelcomeFragment : Fragment() {
 
     /** ANIMATION */
 
-    private fun buttonAnimation () {
+    private fun buttonAndLettersAnimation () {
         binding.customButton.alpha = 0f
         binding.customButton.translationY = 4000f
         binding.customButton.animate().alpha(1f).translationY(-1f).duration = 1500
+        binding.lettersContainer.alpha = 0f
+        binding.lettersContainer.translationY = 4000f
+        binding.lettersContainer.animate().alpha(1f).translationY(-1f).duration = 1000
     }
 
-    private fun tScaler(letter : ImageView, delay : Long) {
-        val scaleX = PropertyValuesHolder.ofFloat(View.SCALE_X, 1.5f)
-        val scaleY = PropertyValuesHolder.ofFloat(View.SCALE_Y, 1.5f)
+    private fun scaler(letter : ImageView, delay : Long, scaleValue : Float) {
+        val scaleX = PropertyValuesHolder.ofFloat(View.SCALE_X, scaleValue)
+        val scaleY = PropertyValuesHolder.ofFloat(View.SCALE_Y, scaleValue)
         val animator = ObjectAnimator.ofPropertyValuesHolder(
             letter, scaleX, scaleY)
         animator.repeatCount = ObjectAnimator.INFINITE
@@ -73,27 +76,9 @@ class WelcomeFragment : Fragment() {
         animator.start()
     }
 
-    private fun aScaler(letter : ImageView, delay : Long) {
-        val scaleX = PropertyValuesHolder.ofFloat(View.SCALE_X, 1.25f)
-        val scaleY = PropertyValuesHolder.ofFloat(View.SCALE_Y, 1.25f)
-        val animator = ObjectAnimator.ofPropertyValuesHolder(
-            letter, scaleX, scaleY)
-        animator.repeatCount = ObjectAnimator.INFINITE
-        animator.repeatMode = ObjectAnimator.REVERSE
-        animator.startDelay = delay
-        animator.start()
-    }
 
-    private fun pScaler(letter : ImageView, delay : Long) {
-        val scaleX = PropertyValuesHolder.ofFloat(View.SCALE_X, 1.5f)
-        val scaleY = PropertyValuesHolder.ofFloat(View.SCALE_Y, 1.5f)
-        val animator = ObjectAnimator.ofPropertyValuesHolder(
-            letter, scaleX, scaleY)
-        animator.repeatCount = ObjectAnimator.INFINITE
-        animator.repeatMode = ObjectAnimator.REVERSE
-        animator.startDelay = delay
-        animator.start()
-    }
+
+
 
 
 
