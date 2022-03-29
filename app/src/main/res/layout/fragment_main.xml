@@ -54,14 +54,14 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/tap_button"
-                style="@style/ButtonViewStyle"
+                style="@style/BigButtonViewStyle"
                 android:layout_width="250dp"
                 android:layout_height="250dp"
                 app:layout_constraintBottom_toTopOf="@+id/timer"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/score_label"
-                android:backgroundTint="@color/red_RYB"/>
+                 />
 
             <TextView
                 android:id="@+id/timer"
@@ -76,7 +76,7 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/high_score_button"
-                style="@style/ButtonViewStyle"
+                style="@style/SmallButtonViewStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -85,7 +85,7 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/info_button"
-                style="@style/ButtonViewStyle"
+                style="@style/SmallButtonViewStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="parent"

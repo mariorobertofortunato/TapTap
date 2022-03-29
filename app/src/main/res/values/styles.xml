@@ -9,10 +9,18 @@
         <item name="cardBackgroundColor">@color/backWhite</item>
     </style>
 
-    <!--Button Style-->
-    <style name="ButtonViewStyle" parent="Widget.AppCompat.Button">
+    <!--Big Button Style-->
+    <style name="BigButtonViewStyle" parent="Widget.AppCompat.Button">
         <item name="android:padding">@dimen/default_padding</item>
         <item name="android:layout_margin">@dimen/default_layout_margin</item>
+        <item name="android:background">@drawable/btn_round_corner</item>
+    </style>
+
+    <!--Small Button Style-->
+    <style name="SmallButtonViewStyle" parent="Widget.AppCompat.Button">
+        <item name="android:padding">@dimen/default_padding</item>
+        <item name="android:layout_margin">@dimen/default_layout_margin</item>
+
     </style>
 
     <!--Button text Style-->
