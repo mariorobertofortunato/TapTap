@@ -47,6 +47,8 @@ class MainFragment : Fragment() {
     }
 
 
+
+
     /** Timer */
     private fun startTimer() {
 
@@ -58,11 +60,12 @@ class MainFragment : Fragment() {
             }
 
             override fun onFinish() {
-                binding.tapButton.isClickable = false
-                cancel()
+                //binding.tapButton.isClickable = false
+                //cancel()
             }
-        }
-        countDownTimer.start()
+        }.start()
+
+        countDownTimer.cancel()
     }
 
     private fun displayTimer() {

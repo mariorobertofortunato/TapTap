@@ -23,10 +23,7 @@ class WelcomeFragment : Fragment() {
     private lateinit var letterA2 : ImageView
     private lateinit var letterP2 : ImageView
 
-
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-
         binding = FragmentWelcomeBinding.inflate(layoutInflater)
         return binding.root
     }
