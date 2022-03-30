@@ -17,7 +17,11 @@ class ScoreFragment : Fragment() {
 
         // Inflate the layout for this fragment
         binding = FragmentScoreBinding.inflate(layoutInflater)
+        return binding.root
+    }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         viewModel.getHighScores()
 
         val adapter = Adapter()
@@ -27,7 +31,6 @@ class ScoreFragment : Fragment() {
             adapter.submitList(highScoresList)
         }
 
-        return binding.root
     }
 
 
